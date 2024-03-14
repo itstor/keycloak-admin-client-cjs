@@ -66,6 +66,8 @@ import UserConsentRepresentation from "@keycloak/keycloak-admin-client/lib/defs/
 import { UserProfileConfig } from "@keycloak/keycloak-admin-client/lib/defs/userProfileMetadata";
 import UserSessionRepresentation from "@keycloak/keycloak-admin-client/lib/defs/userSessionRepresentation";
 import WhoAmIRepresentation from "@keycloak/keycloak-admin-client/lib/defs/whoAmIRepresentation";
+import EffectiveMessageBundleRepresentation from "@keycloak/keycloak-admin-client/lib/defs/effectiveMessageBundleRepresentation";
+import FeatureRepresentation from "@keycloak/keycloak-admin-client/lib/defs/featureRepresentation";
 import {
   Credentials,
   Settings,
@@ -146,4 +148,6 @@ export type {
   Settings,
   TokenResponse,
   TokenResponseRaw,
+  EffectiveMessageBundleRepresentation,
+  FeatureRepresentation,
 };
