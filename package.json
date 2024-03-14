@@ -1,7 +1,7 @@
 {
-  "name": "@s3pweb/keycloak-admin-client-cjs",
-  "version": "22.0.1",
-  "description": "Keycloak Admin Client compiled in CommonJS.",
+  "name": "@itstor/keycloak-admin-client-cjs",
+  "version": "24.0.1",
+  "description": "Keycloak Admin Client compiled in CommonJS. This can be used in NestJS projects.",
   "keywords": [
     "keycloak-admin-client",
     "CommonJS",
@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com//s3pweb/keycloak-admin-client-cjs.git"
+    "url": "https://github.com//itstor/keycloak-admin-client-cjs.git"
   },
-  "author": "s3pweb",
+  "author": "itstor",
   "license": "MIT",
   "dependencies": {
     "@keycloak/keycloak-admin-client": "24.0.1"
