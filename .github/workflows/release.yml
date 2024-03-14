@@ -2,7 +2,7 @@ name: Create new release from tag
 
 on:
   push:
-    tags: [ 'v*' ]
+    tags: ["v*"]
 
 jobs:
   build:
@@ -13,12 +13,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
       - run: npm ci
       - run: |
-          LAST_TAG=`curl https://api.github.com/repos/s3pweb/keycloak-admin-client-cjs/tags | jq -r '.[0].name'`
+          LAST_TAG=`curl https://api.github.com/repos/itstor/keycloak-admin-client-cjs/tags | jq -r '.[0].name'`
           npm install -g @s3pweb/release-message-creator
           BODY=`create-github-message`
           curl -f -X POST -H "Authorization: token ${{secrets.TOKEN}}" \
-            https://api.github.com/repos/s3pweb/keycloak-admin-client-cjs/releases \
+            https://api.github.com/repos/itstor/keycloak-admin-client-cjs/releases \
             -d '{"tag_name":"'"${LAST_TAG}"'","name":"Version '"${LAST_TAG#v}"'","body":'"${BODY}"', "draft":false}'
